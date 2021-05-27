@@ -23,7 +23,7 @@ include("auth_session.php");
       <label>Opencv Input</label>
     </div>
    <div class="user-box">
-      <input type="submit" name="submit" value="Submit" required="">
+      <input type="submit" name="submit" value="Upload" required="">
     </div>
     <a href="search.php">
       <span></span>
