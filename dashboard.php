@@ -7,26 +7,37 @@ include("auth_session.php");
 <head>
     <meta charset="utf-8">
     <title>Dashboard - Client area</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="st.css" />
 </head>
 <body>
-    <div class="form">
-        <p>Hey, <?php echo $_SESSION['username']; ?>!</p>
-        <p>You are in user dashboard page.</p>
-         
-
-
-        <form action="upload.php" method="post" enctype="multipart/form-data">
-            Select image to upload:
-        <input type="file" name="fileToUpload" id="fileToUpload"><br>
-        Opencv Input<br>
-        <input type="text" name="opencv"><br>
-        <input type="submit" value="Upload Image" name="submit">
-        </form>
-
-          
-        <p><a href="search.php">Search</a></p>
-        <p><a href="logout.php">Logout</a></p>
+<div class="login-box">
+  <h2>Hey, <?php echo $_SESSION['username']; ?>!</h2>
+  <h3 style='color:white'>You are in user dashboard page</h3>
+  <form action="upload.php" method="post" enctype="multipart/form-data">
+    <div class="user-box">
+      <span style='color:white'>Select image to upload:</span>  
+      <input type="file" name="fileToUpload" required="">
     </div>
+    <div class="user-box">
+      <input type="text" name="opencv" >
+      <label>Opencv Input</label>
+    </div>
+   <div class="user-box">
+      <input type="submit" name="submit" value="Submit" required="">
+    </div>
+    <a href="search.php">
+      <span></span>
+      <span></span>
+      Search
+    </a>
+     <a href="logout.php">
+      <span></span>
+      <span></span>
+      Logout
+    </a>
+  </form>
+</div>
+  
+
 </body>
 </html>

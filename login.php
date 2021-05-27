@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8"/>
     <title>Login</title>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="st.css"/>
 </head>
 <body>
 <?php
@@ -35,14 +35,28 @@
         }
     } else {
 ?>
-    <form class="form" method="post" name="login">
-        <h1 class="login-title">Login</h1>
-        <input type="text" class="login-input" name="username" placeholder="Username" autofocus="true"/>
-        <input type="password" class="login-input" name="password" placeholder="Password"/>
-        <input type="submit" value="Login" name="submit" class="login-button"/>
-        <p class="link">Don't have an account? <a href="registration.php">Register Now</a></p>
-  </form>
-  <p><a href="test.php">click here</a></p>
+    
+<div class="login-box" >
+  <h2>Login</h2>
+  <form method="post" name="login">
+    <div class="user-box">
+      <input type="text" name="username" required="">
+      <label>Username</label>
+    </div>
+    <div class="user-box">
+      <input type="password" name="password"  required="">
+      <label>Password</label>
+      <input type="submit" name="submit" value="Click here to Login">
+        </div>
+
+      <a href="registration.php">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Register now
+    </a>
+
 <?php
     }
 ?>

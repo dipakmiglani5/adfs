@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <title>Registration</title>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="st.css"/>
 </head>
 <body>
 <?php
@@ -35,36 +35,69 @@
             if($result)
             {
             
-            echo "<div class='form'>
-                  <h3>You are registered successfully.</h3><br/>
-                  <p class='link'>Click here to <a href='login.php'>Login</a></p>
-                  </div>";
+            echo "<div class='login-box'>
+                  <h2>You are registered successfully.</h2><br/>
+                 <span style='color:white'>Click here to </span>  <a href='login.php'  style='color:white'>
+                   <span></span>
+                   <span></span>
+                   <span></span>
+                   <span></span>
+                    Login</a>
+                  </div>" ;
             }
             else {
-                echo "<div class='form'>
-                      <h3>Required fields are missing.</h3><br/>
-                      <p class='link'>Click here to <a href='registration.php'>registration</a> again.</p>
+                echo "<div class='login-box'>
+                      <h2>Required fields are missing.</h2><br/>
+                     <span style='color:white'>Click here to </span><a href='registration.php'>
+                      <span></span>
+                   <span></span>
+                   <span></span>
+                   <span></span>Register</a><span style='color:white'> again.</span>
                       </div>";
             }
 
         }
         elseif ($row > 0) {
-             echo "<div class='form'>
-                  <h3>Username is alredy taken</h3><br/>
-                  <p class='link'>Click here to <a href='registration.php'>registration</a> again.</p>
+             echo "<div class='login-box'>
+                  <h2>Username is alredy taken</h2><br/>
+                  <span style='color:white'>Click here to </span><a href='registration.php' style='color:white'>Register</a><span style='color:white'> again.</span>
                   </div>";  
          } 
     }
      else {
 ?>
-    <form class="form" action="" method="post">
-        <h1 class="login-title">Registration</h1>
-        <input type="text" class="login-input" name="username" placeholder="Username" required />
-        <input type="text" class="login-input" name="email" placeholder="Email Adress">
-        <input type="password" class="login-input" name="password" placeholder="Password" required>
-        <input type="submit" name="submit" value="Register" class="login-button">
-        <p class="link">Already have an account? <a href="login.php">Login here</a></p>
-    </form>
+        <div class="login-box">
+      <h2>Registration</h2>
+     <form action="" method="post">
+    <div class="user-box">
+      <input type="text" name="username" required="">
+      <label>Username</label>
+    </div>
+    <div class="user-box">
+      <input type="text" name="email" required="">
+      <label>Email</label>
+    </div>
+    <div class="user-box">
+      <input type="password" name="password" required="">
+      <label>Password</label>
+    </div>
+
+     <div class="user-box">
+      <input type="submit" name="submit" value="Register">
+    </div>
+
+    <a href="login.php">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Have an account?
+    </a>
+  </form>
+</div>
+
+
+
 <?php
     }
 ?>
