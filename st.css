@@ -1,4 +1,4 @@
-html {
+ html {
   height: 100%;
 }
 body {
@@ -91,7 +91,7 @@ body {
   display: block;
 }
 
-.login-box a span:nth-child(1) {
+/* .login-box a span:nth-child(1) {
   top: 0;
   left: -100%;
   width: 100%;
@@ -164,7 +164,7 @@ body {
   50%,100% {
     bottom: 100%;
   }
-}
+} */
 .login-box .submit{
 
   position: relative;
@@ -194,4 +194,5 @@ body {
 .login-box  .submit {
   position: absolute;
   display: block;
-}
+} 
+ 

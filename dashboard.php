@@ -1,4 +1,4 @@
-<?php
+code <?php
 //include auth_session.php file on all user panel pages
 include("auth_session.php");
 ?>
@@ -10,17 +10,13 @@ include("auth_session.php");
     <link rel="stylesheet" href="st.css" />
 </head>
 <body>
-<div class="login-box">
+<div class="login-box">  
   <h2>Hey, <?php echo $_SESSION['username']; ?>!</h2>
   <h3 style='color:white'>You are in user dashboard page</h3>
   <form action="upload.php" method="post" enctype="multipart/form-data">
     <div class="user-box">
       <span style='color:white'>Select image to upload:</span>  
       <input type="file" name="fileToUpload" required="">
-    </div>
-    <div class="user-box">
-      <input type="text" name="opencv" >
-      <label>Opencv Input</label>
     </div>
    <div class="user-box">
       <input type="submit" name="submit" value="Upload" required="">

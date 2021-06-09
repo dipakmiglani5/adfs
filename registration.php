@@ -19,10 +19,10 @@
         $password = stripslashes($_REQUEST['password']);
         $password = mysqli_real_escape_string($con, $password);
         $create_datetime = date("Y-m-d H:i:s");
-        $query    = "INSERT into `users` (username, password, email, create_datetime)
+        $query    = "INSERT into `usr` (username, password, email, create_datetime)
                      VALUES ('$username', '" . md5($password) . "', '$email', '$create_datetime')";
       
-        $sql = "SELECT username FROM `users` WHERE username = '$username'" ;
+        $sql = "SELECT username FROM `usr` WHERE username = '$username'" ;
         $check   = mysqli_query($con, $sql);
 
         $row = mysqli_num_rows($check);

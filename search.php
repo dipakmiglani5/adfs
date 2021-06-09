@@ -16,7 +16,7 @@ include("auth_session.php");
         <form action="search2.php" method="post" enctype="multipart/form-data">
             Search an image:<br>
         <input type="text" name="search"><br>
-        <input type="submit" value="Search" name="submit">
+        <inpt type="submit" value="Search" name="submit">
         </form>
 
         <p><a href="logout.php">Logout</a></p>
@@ -29,6 +29,17 @@ include("auth_session.php");
       <input type="text" name="search" required="">
       <label>Search an image</label>
     </div>
+    <label style='color:white'>Search in?</label>
+    <div class="user-box">
+      <select  name="searchtype">
+      <option value="both">Both</option> 
+       <option value="ocr">OCR</opticodeon>
+       <option value="opencv">OpenCV</option>
+       
+      </select>
+
+     </div>
+
     <div class="user-box">
      <input type="submit" value="Search" name="submit">
     </div>
@@ -38,6 +49,13 @@ include("auth_session.php");
       <span></span>
       <span></span>
       Logout
+    </a>
+    <a href="dashboard.php">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Upload 
     </a>
   </form>
 </div>

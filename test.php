@@ -15,7 +15,7 @@ $command = escapeshellcmd("/var/www/html/adfs/first.py3");
 //print_r($message);
 $output = shell_exec($command);
 echo $output;
-
+o
 ?>
 
 
