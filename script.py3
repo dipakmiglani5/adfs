@@ -44,7 +44,8 @@ for i in range(len(words)):
     else :
         word_count[words[i]] = 1
 
-res = ''.join(key + str(val) for key, val in word_count.items())
+res = ' '.join(key + str(val) for key, val in word_count.items())
+res.pop(0)
 print(res)
 
  
